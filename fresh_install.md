@@ -321,19 +321,42 @@ AlexaAssistant
 ## Skill Setup Part 2
 
 1. Return to the Skill setup page that we left earlier
-2. Paste the FunctionARN text we copied from the previous step and paste into the "Default" box
 
-![alt text](screenshots/endpoint.jpg)
+![Account Linking Page](screenshots/skill-setup-part2-fig1.png)
 
-2. In the Authorization URL paste the following: -
+2. In the Authorization URI paste the following: -
 
     ```
     https://accounts.google.com/o/oauth2/auth?access_type=offline
     ```
-2. Delete the existing text from the "Client ID" field (it will probably say "alexa-skill")  
-3. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
 
-![alt text](screenshots/linking_1.jpeg)
+3. The Access Token URI should be set to: -
+    
+    ```
+    https://accounts.google.com/o/oauth2/token
+    ```
+
+4. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
+
+![Client ID Location](screenshots/skill-setup-part2-fig2.png)
+
+5. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
+
+6. Leave Client Authentication Scheme as "HTTP Basic"
+
+7. Under Scope: Press "Add Scope" and enter:-
+
+    ```
+    https://www.googleapis.com/auth/assistant-sdk-prototype
+    ```
+
+8. Press "add scope" again for a second box into which enter:-
+
+    ```
+    https://www.googleapis.com/auth/script.external_request
+    ```
+
+![Add Scope and Add Domain](screenshots/skill-setup-part2-fig3.png)
 
 4. Under Domain List : Press "Add domain" and enter:-
 
@@ -345,31 +368,12 @@ AlexaAssistant
 
     ```
     googleapis.com
-    ```
-
-6. Under Scope: Press "Add Scope" and enter:-
-
-    ```
-    https://www.googleapis.com/auth/assistant-sdk-prototype
-    ```
     
-7. Press "add scope" again for a second box into which enter:-
-
-    ```
-    https://www.googleapis.com/auth/script.external_request
-    ```
     
-![alt text](screenshots/linking_2.jpeg)
 
 8. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
-9. The Access Token URI should be set to: -
-    
-    ```
-    https://accounts.google.com/o/oauth2/token
-    ```
 
-10. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
-11. Leave Client Authentication Scheme as "HTTP Basic"
+
 12. Leave eveything under Permission unselected.
 13. Paste into the Privacy Policy URL box: -
 
