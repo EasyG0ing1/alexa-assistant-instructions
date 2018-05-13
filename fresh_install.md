@@ -28,26 +28,22 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 4. If you need to create a Developer account then fill in your details and ensure you answer "NO" for "Do you plan to monetize apps by charging for apps or selling in-app items" and "Do you plan to monetize apps by displaying ads from the Amazon Mobile Ad Network or Mobile Associates?"
 
-## Skill Setup Part 1
-
 ![alt text](screenshots/payment.jpeg)
 
-1. Once you are logged into your account click on the yellow "Get Started" button under Alexa Skills Kit.
+## Skill Setup Part 1
 
-![alt text](screenshots/getting_started.jpeg)
+1. From the Alexa Skills Kit Developer Console, click "Create Skill"
 
-3. Click the "Add a New Skill" yellow box towards the top right.
+![Click the 'Create Skill' button.](screenshots/skill-setup-part1-fig1.png)
 
-![alt text](screenshots/add_new_skill.jpeg)
+2. Set the "SkillName" to "*Google Assistant for Alexa*" and click "Next"
 
-4. You will now be on the "Skill Information" page.
-5. Set "Custom Interaction Model" as the Skill type
-6. Select the correct langauge for your country (THIS IS IMPORTANT AS OTHERWISE THE SKILL WILL NOT LAUNCH)
-7. Set the "Name" to 
+![Enter the 'SkillName'.](screenshots/skill-setup-part1-fig2.png)
 
-    ```
-    Google Assistant for Alexa
-    ```
+3. On the "Choose a model to add to your skill" page, select "Custom", then click "Create Skill"
+
+![Click the 'Select' button under 'Custom'.](screenshots/skill-setup-part1-fig3.png)
+
     
 8. You can set the "Invocation Name" to whatever you want although some names work better than others. I have found that "google" or "my assistant" seem to work well. The name you choose will be the activation name e.g. "Alexa, ask my assistant how long will it take to drive to London?". For these instructions we will set "google" as the invocation name, so in this case you would say: "Alexa, Ask google who is the queen of england". For best results the invocation name should be lowercase **NOTE - if you have already installed my previous Google Skill and have used the "google" invocation name for this then you will either have to use a different invocation name for this skill or rename/delete the older Google skill.**
 
