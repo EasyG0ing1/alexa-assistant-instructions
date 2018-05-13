@@ -324,41 +324,43 @@ AlexaAssistant
 
 2. Paste the FunctionARN text we copied from the previous step and paste into the "Default Region" box.
 
+3. Click "Save Endpoints".
+
 ![Endpoint Page](screenshots/skill-setup-part2-fig1.png)
 
-3. Return to the Account Linking page that we left earlier
+4. Return to the Account Linking page that we left earlier
 
 ![Account Linking Page](screenshots/skill-setup-part2-fig2.png)
 
-4. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
+5. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
 
-5. In the Authorization URI paste the following: -
+6. In the Authorization URI paste the following: -
 
     ```
     https://accounts.google.com/o/oauth2/auth?access_type=offline
     ```
 
-6. The Access Token URI should be set to: -
+7. The Access Token URI should be set to: -
     
     ```
     https://accounts.google.com/o/oauth2/token
     ```
 
-7. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
+8. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
 
 ![Client ID Location](screenshots/skill-setup-part2-fig3.png)
 
-8. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
+9. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
 
-9. Leave Client Authentication Scheme as "HTTP Basic"
+10. Leave Client Authentication Scheme as "HTTP Basic"
 
-10. Under Scope: Press "Add Scope" and enter:-
+11. Under Scope: Press "Add Scope" and enter:-
 
     ```
     https://www.googleapis.com/auth/assistant-sdk-prototype
     ```
 
-11. Press "add scope" again for a second box into which enter:-
+12. Press "add scope" again for a second box into which enter:-
 
     ```
     https://www.googleapis.com/auth/script.external_request
@@ -366,27 +368,27 @@ AlexaAssistant
 
 ![Add Scope and Add Domain](screenshots/skill-setup-part2-fig4.png)
 
-12. Under Domain List : Press "Add domain" and enter:-
+13. Under Domain List : Press "Add domain" and enter:-
 
     ```
     google.com
     ```
 
-13. Press "Add domain" again for a second box into which enter:-
+14. Press "Add domain" again for a second box into which enter:-
 
     ```
     googleapis.com
     ```
 
-14. Click "Save".
+15. Click "Save".
 
-15. Click "Build" at the top of the page.
+16. Click "Build" at the top of the page.
 
-16. Click "3. Build Model".
+17. Click "3. Build Model".
 
 ![Build Model](screenshots/skill-setup-part2-fig5.png)
 
-17. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
+18. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
 
 **You can now close this window/tab - makes sure you save your Notepad/TextEdit file somewhere safe in case you need these details again**
 
