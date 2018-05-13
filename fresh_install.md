@@ -18,6 +18,7 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 ## Installation
 
 1. In a new browser tab/window go to [https://developer.amazon.com/alexa](https://developer.amazon.com/alexa).
+
 2. Hover your cursor over "Your Alexa Consoles" (at the top right of the screen) and click "Skills".
 
 ![Click 'Skills' under 'Your Alexa Consoles'.](screenshots/installation-fig1.png)
@@ -48,7 +49,7 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 5. You can set the "Skill Invocation Name" to whatever you want although some names work better than others. I have found that "google" or "my assistant" seem to work well. The name you choose will be the activation name e.g. "Alexa, ask my assistant how long will it take to drive to London?". For these instructions we will set "google" as the invocation name, so in this case you would say: "Alexa, Ask google who is the queen of england". For best results the invocation name should be lowercase **NOTE - if you have already installed my previous Google Skill and have used the "google" invocation name for this then you will either have to use a different invocation name for this skill or rename/delete the older Google skill.**
 
-6. Click "Interfaces" on the left hand side.
+6. Click "Interfaces" on the left side of the page.
 
 7. Enable "Display Interface" (to allow this to work on an Echo Show or Spot).
 
@@ -56,7 +57,7 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 8. Click the "Save Interfaces" button.
 
-9. Click the 'JSON Editor' on the left hand side.
+9. Click the 'JSON Editor' on the left side of the page.
 
 ![Click 'JSON Editor'.](screenshots/skill-setup-part1-fig5.png)
 
@@ -148,59 +149,16 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 ![Click 'Save Model'.](screenshots/skill-setup-part1-fig6.png)
 
-12. 
+12. Click "Endpoint" on the left side of the page.
 
+13. Select "AWS Lambda ARN" for the Service Endpoint Type.
 
-    
-8. 
+![Select 'AWS Lambda ARN'.](screenshots/skill-setup-part1-fig7.png)
 
-9. Under the Global Fields section, set the "Render Template" option to Yes. Leave all other settings to No
-10. Click "Save" and then click "Next".
+21. Leave the fields empty for the moment, and click the "Save Endpoints" button at the top middle of the page.
 
-![Skill infrormation](screenshots/skill_information.png)
+22. 
 
-11. You will now be on the "Interaction Model" page.
-12. Ignore the box lablled "Built-in intents for render template control"
-
-![Skill infrormation](screenshots/built_in.jpg)
-
-13. Copy the text below into the "Intent Schema" box.
-
-    ```
-
-    ```
-![alt text](screenshots/intent_schema.jpeg)
-
-14. Under Custom Slot Types:-
-15. Type into the "Enter Type" field (NOTE - this is capitalised) :-
-    ```
-    SEARCH
-    ```
-    
-16. Copy the text below and paste into the "Enter Values" box. Once you've pasted them in press the return key to add one blank line at the end of the list
-
-    ```
-    who is the queen
-    why is the sky blue
-    ```
-![alt text](screenshots/slot_types.jpeg)
-
-16. NOW MAKE SURE YOU PRESS THE "ADD" BUTTON UNDERNEATH THE BOX
-
-17. Copy the text below and paste them into the Sample Utterances box. Again, once you've pasted them in press the return key to add one blank line at the end of the list
-
-    ```
-    SearchIntent {search}
-    ```
-![alt text](screenshots/utterances.jpeg) 
-
-18. Click "Save" and then "Next".
-19. You will now be on the "Configuration" page.
-20. Select "AWS Lambda ARN (Amazon Resource Name)" for the skill Endpoint Type.
-21. Leave the "Default" box empty for the moment
-22. Leave "Provide geographical region endpoints?" set to "No"
-
-![alt text](screenshots/endpoint.jpg) 
 
 23. Select "Yes" for Account Linking
 
