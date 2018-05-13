@@ -163,7 +163,7 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 16. Enable "Do you allow users to create an account or link to an existing account with you?"
 
-17. Copy the  Redirect URLs lower down the page you are currently on (there will be a number of these the first should start https://layla.amazon.com/api/skill/link the secondhttps://pitangui.amazon.com/api/skill/link - see screenshot below) and paste them into a Notepad document on windows or TextEdit on mac. We will need these during the setup of the Google API and later on in the setup of the Lambda function
+17. Copy the  Redirect URLs lower down the page you are currently on (there will be a number of these the first should start https://layla.amazon.com/api/skill/link the second https://pitangui.amazon.com/api/skill/link - see screenshot below) and paste them into a Notepad document on windows or TextEdit on mac. We will need these during the setup of the Google API and later on in the setup of the Lambda function
 
 ![Copy 'Redirect URLs'.](screenshots/skill-setup-part1-fig9.png)
 
@@ -320,67 +320,73 @@ AlexaAssistant
 
 ## Skill Setup Part 2
 
-1. Return to the Account Linking page that we left earlier
+1. Return to the Endpoint page in the Amazon Skills Kit Developer Console from earlier.
 
-![Account Linking Page](screenshots/skill-setup-part2-fig1.png)
+2. Paste the FunctionARN text we copied from the previous step and paste into the "Default Region" box.
 
-2. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
+![Endpoint Page](screenshots/skill-setup-part2-fig1.png)
 
-3. In the Authorization URI paste the following: -
+3. Return to the Account Linking page that we left earlier
+
+![Account Linking Page](screenshots/skill-setup-part2-fig2.png)
+
+4. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
+
+5. In the Authorization URI paste the following: -
 
     ```
     https://accounts.google.com/o/oauth2/auth?access_type=offline
     ```
 
-4. The Access Token URI should be set to: -
+6. The Access Token URI should be set to: -
     
     ```
     https://accounts.google.com/o/oauth2/token
     ```
 
-5. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
+7. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
 
-![Client ID Location](screenshots/skill-setup-part2-fig2.png)
+![Client ID Location](screenshots/skill-setup-part2-fig3.png)
 
-6. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
+8. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
 
-7. Leave Client Authentication Scheme as "HTTP Basic"
+9. Leave Client Authentication Scheme as "HTTP Basic"
 
-8. Under Scope: Press "Add Scope" and enter:-
+10. Under Scope: Press "Add Scope" and enter:-
 
     ```
     https://www.googleapis.com/auth/assistant-sdk-prototype
     ```
 
-9. Press "add scope" again for a second box into which enter:-
+11. Press "add scope" again for a second box into which enter:-
 
     ```
     https://www.googleapis.com/auth/script.external_request
     ```
 
-![Add Scope and Add Domain](screenshots/skill-setup-part2-fig3.png)
+![Add Scope and Add Domain](screenshots/skill-setup-part2-fig4.png)
 
-10. Under Domain List : Press "Add domain" and enter:-
+12. Under Domain List : Press "Add domain" and enter:-
 
     ```
     google.com
     ```
 
-11. Press "Add domain" again for a second box into which enter:-
+13. Press "Add domain" again for a second box into which enter:-
 
     ```
     googleapis.com
     ```
 
-12. Click "Save".
+14. Click "Save".
 
-13. Click "Build" at the top of the page.
+15. Click "Build" at the top of the page.
 
-14. Click "3. Build Model".
+16. Click "3. Build Model".
 
-![Build Model](screenshots/skill-setup-part2-fig4.png)
+![Build Model](screenshots/skill-setup-part2-fig5.png)
 
-15. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
+17. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
 
 **You can now close this window/tab - makes sure you save your Notepad/TextEdit file somewhere safe in case you need these details again**
 
