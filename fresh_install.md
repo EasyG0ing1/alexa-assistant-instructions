@@ -64,62 +64,83 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
     ```
     {
-      "intents": [
-        {
-          "intent": "AMAZON.NavigateSettingsIntent"
-        },
-        {
-          "intent": "AMAZON.MoreIntent"
-        },
-        {
-          "intent": "AMAZON.PageDownIntent"
-        },
-        {
-          "intent": "AMAZON.PageUpIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollRightIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollDownIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollLeftIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollUpIntent"
-        },
-        {
-          "intent": "AMAZON.HelpIntent"
-        },
-        {
-          "intent": "AMAZON.NextIntent"
-        },
-        {
-          "intent": "AMAZON.PreviousIntent"
-        },
-        {
-          "intent": "AMAZON.StopIntent"
-        },
-        {
-          "intent": "AMAZON.CancelIntent"
-        },
-        {
-          "intent": "AMAZON.NoIntent"
-        },
-        {
-          "intent": "AMAZON.YesIntent"
-        },
-        {
-          "slots": [
-            {
-              "name": "search",
-              "type": "SEARCH"
+        "interactionModel": {
+            "languageModel": {
+                "invocationName": "google",
+                "intents": [
+                    {
+                        "name": "AMAZON.FallbackIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.CancelIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.HelpIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.StopIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.MoreIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.NavigateHomeIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.NavigateSettingsIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.NextIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.PageUpIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.PageDownIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.PreviousIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.ScrollRightIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.ScrollDownIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.ScrollLeftIntent",
+                        "samples": []
+                    },
+                    {
+                        "name": "AMAZON.ScrollUpIntent",
+                        "samples": []
+                    },
+                    {
+                        "slots": [
+                          {
+                            "name": "search",
+                            "type": "SEARCH"
+                          }
+                        ],
+                        "intent": "SearchIntent"
+                    }
+                ],
+                "types": []
             }
-          ],
-          "intent": "SearchIntent"
         }
-      ]
     }
     ```
 
@@ -146,75 +167,7 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 13. Copy the text below into the "Intent Schema" box.
 
     ```
-{
-	"interactionModel": {
-		"languageModel": {
-			"invocationName": "google",
-			"intents": [{
-				"name": "AMAZON.NavigateSettingsIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.MoreIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.PageDownIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.PageUpIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.ScrollRightIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.ScrollDownIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.ScrollLeftIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.ScrollUpIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.HelpIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.NextIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.PreviousIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.StopIntent",
-				"samples": []
-			}, {
-				"name": "AMAZON.CancelIntent",
-				"samples": []
-			}, {
-				"name": "SearchIntent",
-				"slots": [{
-					"name": "search",
-					"type": "SEARCH"
-				}],
-				"samples": ["{search}"]
-			}, {
-				"name": "AMAZON.NavigateHomeIntent",
-				"samples": []
-			}],
-			"types": [{
-				"name": "SEARCH",
-				"values": [{
-					"name": {
-						"value": "who is the queen"
-					}
-				}, {
-					"name": {
-						"value": "why is the sky blue"
-					}
-				}]
-			}]
-		}
-	}
-}
+
     ```
 ![alt text](screenshots/intent_schema.jpeg)
 
