@@ -18,9 +18,9 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 ## Installation
 
 1. In a new browser tab/window go to https://developer.amazon.com/alexa
-2. Click on the "Your Alexa Dashboards" at the top right of the screen
+2. Hover your cursor over "Your Alexa Consoles" (at the top right of the screen) and click "Skills"
 
-![alt text](screenshots/alexadashboard.jpg)
+![Click 'Skills' under 'Your Alexa Consoles'.](screenshots/installation-fig1.png)
 
 3. You will see an Amazon Login. If you already have an Amazon Developer account then login otherwise press the "Create your Amazon Developer account" button
 
