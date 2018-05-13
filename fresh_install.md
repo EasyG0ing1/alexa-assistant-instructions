@@ -371,9 +371,16 @@ AlexaAssistant
     ```
     googleapis.com
     ```
-12. Click "Save" and then "Next".
 
-13. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
+12. Click "Save".
+
+13. Click "Build" at the top of the page.
+
+14. Click "3. Build Model".
+
+![Build Model](screenshots/skill-setup-part2-fig4.png)
+
+15. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
 
 **You can now close this window/tab - makes sure you save your Notepad/TextEdit file somewhere safe in case you need these details again**
 
