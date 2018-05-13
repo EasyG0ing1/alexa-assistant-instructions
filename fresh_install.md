@@ -155,18 +155,19 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 ![Select 'AWS Lambda ARN'.](screenshots/skill-setup-part1-fig7.png)
 
-21. Leave the fields empty for the moment, and click the "Save Endpoints" button at the top middle of the page.
+14. Leave the fields empty for the moment, and click the "Save Endpoints" button at the top middle of the page.
 
-22. 
+15. Scroll down to the bottom of the page and click "Account Linking".
 
+![Click 'Account Linking'.](screenshots/skill-setup-part1-fig8.png)
 
-23. Select "Yes" for Account Linking
+16. Enable "Do you allow users to create an account or link to an existing account with you?"
 
-24. Copy the  Redirect URLs lower down the page you are currently on (there will be a number of these the first should start https://layla.amazon.com/api/skill/link the secondhttps://pitangui.amazon.com/api/skill/link - see screenshot below) and paste them into a Notepad document on windows or TextEdit on mac. We will need these during the setup of the Google API and later on in the setup of the Lambda function
+17. Copy the  Redirect URLs lower down the page you are currently on (there will be a number of these the first should start https://layla.amazon.com/api/skill/link the secondhttps://pitangui.amazon.com/api/skill/link - see screenshot below) and paste them into a Notepad document on windows or TextEdit on mac. We will need these during the setup of the Google API and later on in the setup of the Lambda function
 
-![alt text](screenshots/redirect.jpeg)
+![Copy 'Redirect URLs'.](screenshots/skill-setup-part1-fig9.png)
 
-25. At this point we will pause the setup of the skill and setup the google API. 
+18. At this point we will pause the setup of the skill and setup the google API.
 
 **Leave this page open as we will come back to it after we have setup the Google Assistant API**
 
