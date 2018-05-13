@@ -320,37 +320,39 @@ AlexaAssistant
 
 ## Skill Setup Part 2
 
-1. Return to the Skill setup page that we left earlier
+1. Return to the Account Linking page that we left earlier
 
 ![Account Linking Page](screenshots/skill-setup-part2-fig1.png)
 
-2. In the Authorization URI paste the following: -
+2. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
+
+3. In the Authorization URI paste the following: -
 
     ```
     https://accounts.google.com/o/oauth2/auth?access_type=offline
     ```
 
-3. The Access Token URI should be set to: -
+4. The Access Token URI should be set to: -
     
     ```
     https://accounts.google.com/o/oauth2/token
     ```
 
-4. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
+5. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
 
 ![Client ID Location](screenshots/skill-setup-part2-fig2.png)
 
-5. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
+6. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
 
-6. Leave Client Authentication Scheme as "HTTP Basic"
+7. Leave Client Authentication Scheme as "HTTP Basic"
 
-7. Under Scope: Press "Add Scope" and enter:-
+8. Under Scope: Press "Add Scope" and enter:-
 
     ```
     https://www.googleapis.com/auth/assistant-sdk-prototype
     ```
 
-8. Press "add scope" again for a second box into which enter:-
+9. Press "add scope" again for a second box into which enter:-
 
     ```
     https://www.googleapis.com/auth/script.external_request
@@ -358,33 +360,20 @@ AlexaAssistant
 
 ![Add Scope and Add Domain](screenshots/skill-setup-part2-fig3.png)
 
-4. Under Domain List : Press "Add domain" and enter:-
+10. Under Domain List : Press "Add domain" and enter:-
 
     ```
     google.com
     ```
 
-5. Press "Add domain" again for a second box into which enter:-
+11. Press "Add domain" again for a second box into which enter:-
 
     ```
     googleapis.com
-    
-    
-
-8. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
-
-
-12. Leave eveything under Permission unselected.
-13. Paste into the Privacy Policy URL box: -
-
     ```
-    https://www.google.com/policies/privacy/
-    ```
-![alt text](screenshots/linking_3.jpeg)    
+12. Click "Save" and then "Next".
 
-14. Click "Save" and then "Next".
-
-15. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
+13. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
 
 **You can now close this window/tab - makes sure you save your Notepad/TextEdit file somewhere safe in case you need these details again**
 
