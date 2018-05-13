@@ -54,11 +54,13 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 ![Enable "Display Interface"](screenshots/skill-setup-part1-fig4.png)
 
-8. Click the 'JSON Editor' on the left hand side.
+8. Click the "Save Interfaces" button.
+
+9. Click the 'JSON Editor' on the left hand side.
 
 ![Click 'JSON Editor'.](screenshots/skill-setup-part1-fig5.png)
 
-9. Copy the text below into the "JSON Editor" box (replacing the previous contents of that box).
+10. Copy the text below into the "JSON Editor" box (replacing the previous contents of that box).
 
     ```
     {
@@ -121,11 +123,11 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
     }
     ```
 
-10. Click the "Save Model" button.
+11. Click the "Save Model" button.
 
 ![Click 'Save Model'.](screenshots/skill-setup-part1-fig6.png)
 
-11. 
+12. 
 
 
     
@@ -144,64 +146,75 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 13. Copy the text below into the "Intent Schema" box.
 
     ```
-    {
-      "intents": [
-        {
-          "intent": "AMAZON.NavigateSettingsIntent"
-        },
-        {
-          "intent": "AMAZON.MoreIntent"
-        },
-        {
-          "intent": "AMAZON.PageDownIntent"
-        },
-        {
-          "intent": "AMAZON.PageUpIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollRightIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollDownIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollLeftIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollUpIntent"
-        },
-        {
-          "intent": "AMAZON.HelpIntent"
-        },
-        {
-          "intent": "AMAZON.NextIntent"
-        },
-        {
-          "intent": "AMAZON.PreviousIntent"
-        },
-        {
-          "intent": "AMAZON.StopIntent"
-        },
-        {
-          "intent": "AMAZON.CancelIntent"
-        },
-        {
-          "intent": "AMAZON.NoIntent"
-        },
-        {
-          "intent": "AMAZON.YesIntent"
-        },
-        {
-          "slots": [
-            {
-              "name": "search",
-              "type": "SEARCH"
-            }
-          ],
-          "intent": "SearchIntent"
-        }
-      ]
-    }
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "google",
+			"intents": [{
+				"name": "AMAZON.NavigateSettingsIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.MoreIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.PageDownIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.PageUpIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.ScrollRightIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.ScrollDownIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.ScrollLeftIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.ScrollUpIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.HelpIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.NextIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.PreviousIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.StopIntent",
+				"samples": []
+			}, {
+				"name": "AMAZON.CancelIntent",
+				"samples": []
+			}, {
+				"name": "SearchIntent",
+				"slots": [{
+					"name": "search",
+					"type": "SEARCH"
+				}],
+				"samples": ["{search}"]
+			}, {
+				"name": "AMAZON.NavigateHomeIntent",
+				"samples": []
+			}],
+			"types": [{
+				"name": "SEARCH",
+				"values": [{
+					"name": {
+						"value": "who is the queen"
+					}
+				}, {
+					"name": {
+						"value": "why is the sky blue"
+					}
+				}]
+			}]
+		}
+	}
+}
     ```
 ![alt text](screenshots/intent_schema.jpeg)
 
