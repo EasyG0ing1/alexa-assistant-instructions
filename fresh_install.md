@@ -17,12 +17,12 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 ## Installation
 
-1. In a new browser tab/window go to https://developer.amazon.com/alexa
-2. Hover your cursor over "Your Alexa Consoles" (at the top right of the screen) and click "Skills"
+1. In a new browser tab/window go to [https://developer.amazon.com/alexa](https://developer.amazon.com/alexa).
+2. Hover your cursor over "Your Alexa Consoles" (at the top right of the screen) and click "Skills".
 
 ![Click 'Skills' under 'Your Alexa Consoles'.](screenshots/installation-fig1.png)
 
-3. You will see an Amazon Login. If you already have an Amazon Developer account then login otherwise press the "Create your Amazon Developer account" button
+3. You will see an Amazon Login. If you already have an Amazon Developer account then login otherwise press the "Create your Amazon Developer account" button.
 
 ![alt text](screenshots/dashboardlogin.jpg)
 
@@ -36,13 +36,86 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 ![Click the 'Create Skill' button.](screenshots/skill-setup-part1-fig1.png)
 
-2. Set the "SkillName" to "*Google Assistant for Alexa*" and click "Next"
+2. Set the "SkillName" to "*Google Assistant for Alexa*" and click "Next".
 
 ![Enter the 'SkillName'.](screenshots/skill-setup-part1-fig2.png)
 
-3. On the "Choose a model to add to your skill" page, select "Custom", then click "Create Skill"
+3. On the "Choose a model to add to your skill" page, select "Custom", then click "Create Skill".
 
 ![Click the 'Select' button under 'Custom'.](screenshots/skill-setup-part1-fig3.png)
+
+4. Click the 'JSON Editor' on the left hand side.
+
+![Click 'JSON Editor'.](screenshots/skill-setup-part1-fig4.png)
+
+5. Copy the text below into the "JSON Editor" box (replacing the previous contents of that box).
+
+    ```
+    {
+      "intents": [
+        {
+          "intent": "AMAZON.NavigateSettingsIntent"
+        },
+        {
+          "intent": "AMAZON.MoreIntent"
+        },
+        {
+          "intent": "AMAZON.PageDownIntent"
+        },
+        {
+          "intent": "AMAZON.PageUpIntent"
+        },
+        {
+          "intent": "AMAZON.ScrollRightIntent"
+        },
+        {
+          "intent": "AMAZON.ScrollDownIntent"
+        },
+        {
+          "intent": "AMAZON.ScrollLeftIntent"
+        },
+        {
+          "intent": "AMAZON.ScrollUpIntent"
+        },
+        {
+          "intent": "AMAZON.HelpIntent"
+        },
+        {
+          "intent": "AMAZON.NextIntent"
+        },
+        {
+          "intent": "AMAZON.PreviousIntent"
+        },
+        {
+          "intent": "AMAZON.StopIntent"
+        },
+        {
+          "intent": "AMAZON.CancelIntent"
+        },
+        {
+          "intent": "AMAZON.NoIntent"
+        },
+        {
+          "intent": "AMAZON.YesIntent"
+        },
+        {
+          "slots": [
+            {
+              "name": "search",
+              "type": "SEARCH"
+            }
+          ],
+          "intent": "SearchIntent"
+        }
+      ]
+    }
+    ```
+
+6. Click the "Save Model" button.
+
+![Click 'Save Model'.](screenshots/skill-setup-part1-fig5.png)
+
+7. 
 
     
 8. You can set the "Invocation Name" to whatever you want although some names work better than others. I have found that "google" or "my assistant" seem to work well. The name you choose will be the activation name e.g. "Alexa, ask my assistant how long will it take to drive to London?". For these instructions we will set "google" as the invocation name, so in this case you would say: "Alexa, Ask google who is the queen of england". For best results the invocation name should be lowercase **NOTE - if you have already installed my previous Google Skill and have used the "google" invocation name for this then you will either have to use a different invocation name for this skill or rename/delete the older Google skill.**
