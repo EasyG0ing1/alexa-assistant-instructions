@@ -44,11 +44,21 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 ![Click the 'Select' button under 'Custom'.](screenshots/skill-setup-part1-fig3.png)
 
-4. Click the 'JSON Editor' on the left hand side.
+4. Click "Invocation Name" on the right side of the page.
 
-![Click 'JSON Editor'.](screenshots/skill-setup-part1-fig4.png)
+5. You can set the "Skill Invocation Name" to whatever you want although some names work better than others. I have found that "google" or "my assistant" seem to work well. The name you choose will be the activation name e.g. "Alexa, ask my assistant how long will it take to drive to London?". For these instructions we will set "google" as the invocation name, so in this case you would say: "Alexa, Ask google who is the queen of england". For best results the invocation name should be lowercase **NOTE - if you have already installed my previous Google Skill and have used the "google" invocation name for this then you will either have to use a different invocation name for this skill or rename/delete the older Google skill.**
 
-5. Copy the text below into the "JSON Editor" box (replacing the previous contents of that box).
+6. Click "Interfaces" on the left hand side.
+
+7. Enable "Display Interface" (to allow this to work on an Echo Show or Spot).
+
+![Enable "Display Interface"](screenshots/skill-setup-part1-fig4.png)
+
+8. Click the 'JSON Editor' on the left hand side.
+
+![Click 'JSON Editor'.](screenshots/skill-setup-part1-fig5.png)
+
+9. Copy the text below into the "JSON Editor" box (replacing the previous contents of that box).
 
     ```
     {
@@ -111,14 +121,15 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
     }
     ```
 
-6. Click the "Save Model" button.
+10. Click the "Save Model" button.
 
-![Click 'Save Model'.](screenshots/skill-setup-part1-fig5.png)
+![Click 'Save Model'.](screenshots/skill-setup-part1-fig6.png)
 
-7. 
+11. 
+
 
     
-8. You can set the "Invocation Name" to whatever you want although some names work better than others. I have found that "google" or "my assistant" seem to work well. The name you choose will be the activation name e.g. "Alexa, ask my assistant how long will it take to drive to London?". For these instructions we will set "google" as the invocation name, so in this case you would say: "Alexa, Ask google who is the queen of england". For best results the invocation name should be lowercase **NOTE - if you have already installed my previous Google Skill and have used the "google" invocation name for this then you will either have to use a different invocation name for this skill or rename/delete the older Google skill.**
+8. 
 
 9. Under the Global Fields section, set the "Render Template" option to Yes. Leave all other settings to No
 10. Click "Save" and then click "Next".
