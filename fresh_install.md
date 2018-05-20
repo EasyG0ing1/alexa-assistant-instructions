@@ -63,87 +63,102 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 10. Copy the text below into the "JSON Editor" box (replacing the previous contents of that box).
 
-    ```
-    {
-        "interactionModel": {
-            "languageModel": {
-                "invocationName": "google",
-                "intents": [
-                    {
-                        "name": "AMAZON.FallbackIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.CancelIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.HelpIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.StopIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.MoreIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.NavigateHomeIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.NavigateSettingsIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.NextIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.PageUpIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.PageDownIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.PreviousIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.ScrollRightIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.ScrollDownIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.ScrollLeftIntent",
-                        "samples": []
-                    },
-                    {
-                        "name": "AMAZON.ScrollUpIntent",
-                        "samples": []
-                    },
-                    {
-                        "slots": [
+```json
+   {
+      "interactionModel": {
+          "languageModel": {
+              "invocationName": "google",
+              "intents": [
+                  {
+                      "name": "AMAZON.NavigateSettingsIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.MoreIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.PageDownIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.PageUpIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.ScrollRightIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.ScrollDownIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.ScrollLeftIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.ScrollUpIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.HelpIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.NextIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.PreviousIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.StopIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "AMAZON.CancelIntent",
+                      "samples": []
+                  },
+                  {
+                      "name": "SearchIntent",
+                      "slots": [
                           {
-                            "name": "search",
-                            "type": "SEARCH"
+                              "name": "search",
+                              "type": "SEARCH"
                           }
-                        ],
-                        "intent": "SearchIntent"
-                    }
-                ],
-                "types": []
-            }
-        }
-    }
-    ```
+                      ],
+                      "samples": [
+                          "{search}"
+                      ]
+                  },
+                  {
+                      "name": "AMAZON.NavigateHomeIntent",
+                      "samples": []
+                  }
+              ],
+              "types": [
+                  {
+                      "name": "SEARCH",
+                      "values": [
+                          {
+                              "name": {
+                                  "value": "who is the queen"
+                              }
+                          },
+                          {
+                              "name": {
+                                  "value": "why is the sky blue"
+                              }
+                          }
+                      ]
+                  }
+              ]
+          }
+      }
+   }
+```
 
 11. Click the "Save Model" button.
 
