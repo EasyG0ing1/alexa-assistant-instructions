@@ -17,152 +17,172 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 ## Installation
 
-1. In a new browser tab/window go to https://developer.amazon.com/alexa
-2. Click on the "Your Alexa Dashboards" at the top right of the screen
+1. In a new browser tab/window go to [https://developer.amazon.com/alexa](https://developer.amazon.com/alexa).
 
-![alt text](screenshots/alexadashboard.jpg)
+2. Hover your cursor over "Your Alexa Consoles" (at the top right of the screen) and click "Skills".
 
-3. You will see an Amazon Login. If you already have an Amazon Developer account then login otherwise press the "Create your Amazon Developer account" button
+![Click 'Skills' under 'Your Alexa Consoles'.](screenshots/installation-fig1.png)
+
+3. You will see an Amazon Login. If you already have an Amazon Developer account then login otherwise press the "Create your Amazon Developer account" button.
 
 ![alt text](screenshots/dashboardlogin.jpg)
 
 4. If you need to create a Developer account then fill in your details and ensure you answer "NO" for "Do you plan to monetize apps by charging for apps or selling in-app items" and "Do you plan to monetize apps by displaying ads from the Amazon Mobile Ad Network or Mobile Associates?"
 
-## Skill Setup Part 1
-
 ![alt text](screenshots/payment.jpeg)
 
-1. Once you are logged into your account click on the yellow "Get Started" button under Alexa Skills Kit.
+## Skill Setup Part 1
 
-![alt text](screenshots/getting_started.jpeg)
+1. From the Alexa Skills Kit Developer Console, click "Create Skill"
 
-3. Click the "Add a New Skill" yellow box towards the top right.
+![Click the 'Create Skill' button.](screenshots/skill-setup-part1-fig1.png)
 
-![alt text](screenshots/add_new_skill.jpeg)
+2. Set the "SkillName" to "*Google Assistant for Alexa*" and click "Next".
 
-4. You will now be on the "Skill Information" page.
-5. Set "Custom Interaction Model" as the Skill type
-6. Select the correct langauge for your country (THIS IS IMPORTANT AS OTHERWISE THE SKILL WILL NOT LAUNCH)
-7. Set the "Name" to 
+![Enter the 'SkillName'.](screenshots/skill-setup-part1-fig2.png)
 
-    ```
-    Google Assistant for Alexa
-    ```
-    
-8. You can set the "Invocation Name" to whatever you want although some names work better than others. I have found that "google" or "my assistant" seem to work well. The name you choose will be the activation name e.g. "Alexa, ask my assistant how long will it take to drive to London?". For these instructions we will set "google" as the invocation name, so in this case you would say: "Alexa, Ask google who is the queen of england". For best results the invocation name should be lowercase **NOTE - if you have already installed my previous Google Skill and have used the "google" invocation name for this then you will either have to use a different invocation name for this skill or rename/delete the older Google skill.**
+3. On the "Choose a model to add to your skill" page, select "Custom", then click "Create Skill".
 
-9. Under the Global Fields section, set the "Render Template" option to Yes. Leave all other settings to No
-10. Click "Save" and then click "Next".
+![Click the 'Select' button under 'Custom'.](screenshots/skill-setup-part1-fig3.png)
 
-![Skill infrormation](screenshots/skill_information.png)
+4. Click "Invocation Name" on the right side of the page.
 
-11. You will now be on the "Interaction Model" page.
-12. Ignore the box lablled "Built-in intents for render template control"
+5. You can set the "Skill Invocation Name" to whatever you want although some names work better than others. I have found that "google" or "my assistant" seem to work well. The name you choose will be the activation name e.g. "Alexa, ask my assistant how long will it take to drive to London?". For these instructions we will set "google" as the invocation name, so in this case you would say: "Alexa, Ask google who is the queen of england". For best results the invocation name should be lowercase **NOTE - if you have already installed my previous Google Skill and have used the "google" invocation name for this then you will either have to use a different invocation name for this skill or rename/delete the older Google skill.**
 
-![Skill infrormation](screenshots/built_in.jpg)
+6. Click "Interfaces" on the left side of the page.
 
-13. Copy the text below into the "Intent Schema" box.
+7. Enable "Display Interface" (to allow this to work on an Echo Show or Spot).
 
-    ```
-    {
-      "intents": [
-        {
-          "intent": "AMAZON.NavigateSettingsIntent"
-        },
-        {
-          "intent": "AMAZON.MoreIntent"
-        },
-        {
-          "intent": "AMAZON.PageDownIntent"
-        },
-        {
-          "intent": "AMAZON.PageUpIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollRightIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollDownIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollLeftIntent"
-        },
-        {
-          "intent": "AMAZON.ScrollUpIntent"
-        },
-        {
-          "intent": "AMAZON.HelpIntent"
-        },
-        {
-          "intent": "AMAZON.NextIntent"
-        },
-        {
-          "intent": "AMAZON.PreviousIntent"
-        },
-        {
-          "intent": "AMAZON.StopIntent"
-        },
-        {
-          "intent": "AMAZON.CancelIntent"
-        },
-        {
-          "intent": "AMAZON.NoIntent"
-        },
-        {
-          "intent": "AMAZON.YesIntent"
-        },
-        {
-          "slots": [
-            {
-              "name": "search",
-              "type": "SEARCH"
-            }
+![Enable "Display Interface"](screenshots/skill-setup-part1-fig4.png)
+
+8. Click the "Save Interfaces" button.
+
+9. Click the 'JSON Editor' on the left side of the page.
+
+![Click 'JSON Editor'.](screenshots/skill-setup-part1-fig5.png)
+
+10. Copy the text below into the "JSON Editor" box (replacing the previous contents of that box).
+
+```json
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "google",
+          "intents": [
+              {
+                  "name": "AMAZON.NavigateSettingsIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.MoreIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PageDownIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PageUpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollRightIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollDownIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollLeftIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollUpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NextIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PreviousIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "SearchIntent",
+                  "slots": [
+                      {
+                          "name": "search",
+                          "type": "SEARCH"
+                      }
+                  ],
+                  "samples": [
+                      "{search}"
+                  ]
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              }
           ],
-          "intent": "SearchIntent"
-        }
-      ]
-    }
-    ```
-![alt text](screenshots/intent_schema.jpeg)
+          "types": [
+              {
+                  "name": "SEARCH",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "who is the queen"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "why is the sky blue"
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  }
+}
+```
 
-14. Under Custom Slot Types:-
-15. Type into the "Enter Type" field (NOTE - this is capitalised) :-
-    ```
-    SEARCH
-    ```
-    
-16. Copy the text below and paste into the "Enter Values" box. Once you've pasted them in press the return key to add one blank line at the end of the list
+11. Click the "Save Model" button.
 
-    ```
-    who is the queen
-    why is the sky blue
-    ```
-![alt text](screenshots/slot_types.jpeg)
+![Click 'Save Model'.](screenshots/skill-setup-part1-fig6.png)
 
-16. NOW MAKE SURE YOU PRESS THE "ADD" BUTTON UNDERNEATH THE BOX
+12. Click "Endpoint" on the left side of the page.
 
-17. Copy the text below and paste them into the Sample Utterances box. Again, once you've pasted them in press the return key to add one blank line at the end of the list
+13. Select "AWS Lambda ARN" for the Service Endpoint Type.
 
-    ```
-    SearchIntent {search}
-    ```
-![alt text](screenshots/utterances.jpeg) 
+![Select 'AWS Lambda ARN'.](screenshots/skill-setup-part1-fig7.png)
 
-18. Click "Save" and then "Next".
-19. You will now be on the "Configuration" page.
-20. Select "AWS Lambda ARN (Amazon Resource Name)" for the skill Endpoint Type.
-21. Leave the "Default" box empty for the moment
-22. Leave "Provide geographical region endpoints?" set to "No"
+14. Leave the fields empty for the moment, and click the "Save Endpoints" button at the top middle of the page.
 
-![alt text](screenshots/endpoint.jpg) 
+15. Scroll down to the bottom of the page and click "Account Linking".
 
-23. Select "Yes" for Account Linking
+![Click 'Account Linking'.](screenshots/skill-setup-part1-fig8.png)
 
-24. Copy the  Redirect URLs lower down the page you are currently on (there will be a number of these the first should start https://layla.amazon.com/api/skill/link the secondhttps://pitangui.amazon.com/api/skill/link - see screenshot below) and paste them into a Notepad document on windows or TextEdit on mac. We will need these during the setup of the Google API and later on in the setup of the Lambda function
+16. Enable "Do you allow users to create an account or link to an existing account with you?"
 
-![alt text](screenshots/redirect.jpeg)
+17. Copy the  Redirect URLs lower down the page you are currently on (there will be a number of these the first should start https://layla.amazon.com/api/skill/link the second https://pitangui.amazon.com/api/skill/link - see screenshot below) and paste them into a Notepad document on windows or TextEdit on mac. We will need these during the setup of the Google API and later on in the setup of the Lambda function
 
-25. At this point we will pause the setup of the skill and setup the google API. 
+![Copy 'Redirect URLs'.](screenshots/skill-setup-part1-fig9.png)
+
+18. At this point we will pause the setup of the skill and setup the google API.
 
 **Leave this page open as we will come back to it after we have setup the Google Assistant API**
 
@@ -315,67 +335,75 @@ AlexaAssistant
 
 ## Skill Setup Part 2
 
-1. Return to the Skill setup page that we left earlier
-2. Paste the FunctionARN text we copied from the previous step and paste into the "Default" box
+1. Return to the Endpoint page in the Amazon Skills Kit Developer Console from earlier.
 
-![alt text](screenshots/endpoint.jpg)
+2. Paste the FunctionARN text we copied from the previous step and paste into the "Default Region" box.
 
-2. In the Authorization URL paste the following: -
+3. Click "Save Endpoints".
+
+![Endpoint Page](screenshots/skill-setup-part2-fig1.png)
+
+4. Return to the Account Linking page that we left earlier
+
+![Account Linking Page](screenshots/skill-setup-part2-fig2.png)
+
+5. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
+
+6. In the Authorization URI paste the following: -
 
     ```
     https://accounts.google.com/o/oauth2/auth?access_type=offline
     ```
-2. Delete the existing text from the "Client ID" field (it will probably say "alexa-skill")  
-3. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
 
-![alt text](screenshots/linking_1.jpeg)
-
-4. Under Domain List : Press "Add domain" and enter:-
-
-    ```
-    google.com
-    ```
-
-5. Press "Add domain" again for a second box into which enter:-
-
-    ```
-    googleapis.com
-    ```
-
-6. Under Scope: Press "Add Scope" and enter:-
-
-    ```
-    https://www.googleapis.com/auth/assistant-sdk-prototype
-    ```
-    
-7. Press "add scope" again for a second box into which enter:-
-
-    ```
-    https://www.googleapis.com/auth/script.external_request
-    ```
-    
-![alt text](screenshots/linking_2.jpeg)
-
-8. Under Authorisation Grant Type make sure "Auth Code Grant" is selected.
-9. The Access Token URI should be set to: -
+7. The Access Token URI should be set to: -
     
     ```
     https://accounts.google.com/o/oauth2/token
     ```
 
-10. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
-11. Leave Client Authentication Scheme as "HTTP Basic"
-12. Leave eveything under Permission unselected.
-13. Paste into the Privacy Policy URL box: -
+8. Copy the Client ID from your Notepad/TextEdit document (HINT - it's the longer of the two) and paste it into the Client ID box
+
+![Client ID Location](screenshots/skill-setup-part2-fig3.png)
+
+9. Copy the Client Secret from your Notepad/TextEdit document (HINT - it's the shorter of the two) and paste it into the Client Secret box
+
+10. Leave Client Authentication Scheme as "HTTP Basic"
+
+11. Under Scope: Press "Add Scope" and enter:-
 
     ```
-    https://www.google.com/policies/privacy/
+    https://www.googleapis.com/auth/assistant-sdk-prototype
     ```
-![alt text](screenshots/linking_3.jpeg)    
 
-14. Click "Save" and then "Next".
+12. Press "add scope" again for a second box into which enter:-
 
-15. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
+    ```
+    https://www.googleapis.com/auth/script.external_request
+    ```
+
+![Add Scope and Add Domain](screenshots/skill-setup-part2-fig4.png)
+
+13. Under Domain List : Press "Add domain" and enter:-
+
+    ```
+    google.com
+    ```
+
+14. Press "Add domain" again for a second box into which enter:-
+
+    ```
+    googleapis.com
+    ```
+
+15. Click "Save".
+
+16. Click "Build" at the top of the page.
+
+17. Click "3. Build Model".
+
+![Build Model](screenshots/skill-setup-part2-fig5.png)
+
+18. There is no need to go any further through the process i.e. submitting for certification. There is no point in testing the skill on the next page as the simulator cannot authenticate against the Google API. 
 
 **You can now close this window/tab - makes sure you save your Notepad/TextEdit file somewhere safe in case you need these details again**
 
