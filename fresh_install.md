@@ -5,6 +5,10 @@ If you already have Version 1 of the skill installed then please use the instruc
 
 ## MAKE SURE YOU DO THIS INSTALLATION ON A PC/MAC/LINUX MACHINE - A PHONE OR TABLET RUNNING iOS OR ANDROID WILL CAUSE ISSUES
 
+## CREDITS
+
+Many thanks to @brianhanifin for updating the installation instructions for the new Amazon skill setup pages
+
 # Sites reproducing installation instructions
 
 These installation instructions and the CloudFormation template linked to in these instructions (provided for users installing the lambda function) are licenced under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/)
