@@ -41,7 +41,7 @@ NOTE: I have granted Paul Hibbert the rights to link to the Cloudformation for t
 
 ![Click the 'Create Skill' button.](screenshots/skill-setup-part1-fig1.png)
 
-2. Set the "SkillName" to "*Google Assistant for Alexa*" and click "Next".
+2. Set the "SkillName" to "*Google Assistant for Alexa*" and then select the language that you wish to run the skill in IMPORTANT: If you are not based in the US or your device is set to another langauage e.g. UK English then you will need to select the same language as your device is set to, otherwise the skill will default to US English.
 
 ![Enter the 'SkillName'.](screenshots/skill-setup-part1-fig2.png)
 
